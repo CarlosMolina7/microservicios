@@ -12,10 +12,10 @@ WORKDIR /app
 
 
 # Copiamos el archivo .jar generado por Maven en la imagen
-COPY target/config-service-0.0.1-SNAPSHOT.jar /app/config-service-0.0.1-SNAPSHOT.jar
+COPY target/laptop-service-0.0.1-SNAPSHOT.jar /app/laptop-service-0.0.1-SNAPSHOT.jar
 
 # Exponemos el puerto 8080 para la API de Spring Boot
-EXPOSE 8081
+EXPOSE 8002
 
 # Iniciamos la aplicación al ejecutar el contenedor Docker
-CMD ["java", "-jar", "config-service-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "laptop-service-0.0.1-SNAPSHOT.jar"]

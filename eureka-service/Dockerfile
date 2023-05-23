@@ -12,10 +12,10 @@ WORKDIR /app
 
 
 # Copiamos el archivo .jar generado por Maven en la imagen
-COPY target/config-service-0.0.1-SNAPSHOT.jar /app/config-service-0.0.1-SNAPSHOT.jar
+COPY target/eureka-service-0.0.1-SNAPSHOT.jar /app/eureka-service-0.0.1-SNAPSHOT.jar
 
 # Exponemos el puerto 8080 para la API de Spring Boot
-EXPOSE 8081
+EXPOSE 8761
 
 # Iniciamos la aplicación al ejecutar el contenedor Docker
-CMD ["java", "-jar", "config-service-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "eureka-service-0.0.1-SNAPSHOT.jar"]
